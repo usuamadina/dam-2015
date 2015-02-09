@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 5 - Formulario -</title>
+</head>
+<body>
+	<p><strong>Rellena tu CV</strong></p>
+		<form action="http:192.168.1.65/dam-2015/XHTML/post.php" method="post" enctype="multipart/form-data">
+		<div>
+			<label for="">Nombre</label>
+			<input type="text" name="nombre" value=""/>
+		</div>
+		<div>
+			<label for="apellidos">Apellidos</label>
+			<input type="text" name="apellidos" value=""/>
+		</div>
+		<div>
+			<label for="dni">DNI</label>
+			<input type="text" name="dni" value=""/>
+		</div>
+		<div>
+			<label for="">Contraseña</label>
+			<input type="password" name="contraseña" value=""></div>
+		<div>
+			<label for="sexo">Sexo</label>
+			<input type="radio" name="sexo" value="Hombre" checked="" />
+			<label for=""> Hombre</label>
+			<input type="radio" name="sexo" value="Mujer"/>
+			<label for=""> Mujer</label>
+		</div>
+
+		<div>
+			<label for="">Incluir mi foto</label>
+			<input type="file" name="foto"/>
+		</div>
+		
+		<div><input type="checkbox" name="newsletter" value="1">
+		<label for="">Subscribirme al boletín de novedades</label></div>
+		<div>
+		<input type="submit" name="boton1" value="Enviar"/> 
+		<input type="reset" name="boton2" value="Reset"/>
+		</div>
+</form>
+
+</body>
+</html>
