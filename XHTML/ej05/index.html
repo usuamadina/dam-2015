@@ -8,16 +8,16 @@
 	<p><strong>Rellena tu CV</strong></p>
 		<form action="http:192.168.1.65/dam-2015/XHTML/post.php" method="post" enctype="multipart/form-data">
 		<div>
-			<label for="">Nombre</label>
-			<input type="text" name="nombre" value=""/>
+			<label for="nombre">Nombre</label>
+			<input type="text" name="nombre" id="nombre" value=""/>
 		</div>
 		<div>
 			<label for="apellidos">Apellidos</label>
-			<input type="text" name="apellidos" value=""/>
+			<input type="text" name="apellidos" id="apellidos" value=""/>
 		</div>
 		<div>
 			<label for="dni">DNI</label>
-			<input type="text" name="dni" value=""/>
+			<input type="text" name="dni"value=""/>
 		</div>
 		<div>
 			<label for="">Contraseña</label>
@@ -35,8 +35,8 @@
 			<input type="file" name="foto"/>
 		</div>
 		
-		<div><input type="checkbox" name="newsletter" value="1">
-		<label for="">Subscribirme al boletín de novedades</label></div>
+		<div><input type="checkbox" id="newsletter" name="newsletter" value="1">
+		<label for="newsletter">Subscribirme al boletín de novedades</label></div>
 		<div>
 		<input type="submit" name="boton1" value="Enviar"/> 
 		<input type="reset" name="boton2" value="Reset"/>
