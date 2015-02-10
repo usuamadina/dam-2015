@@ -8,17 +8,31 @@
 <div class="wrapper">
 	<div class="header">
 		<div class="contenido-header">
-			<span class="contenido-header-1">My Weblog</span>
-		</div>
-		<div class="contenido-header">
-			<span class="contenido-header-1"> A lot of effort went into making this effortless</span>
-		</div>
-		<div class="contenido-header">
-			
+			<h1>My Weblog</h1>		
+			<p class="contenido-header-1"> A lot of effort went into making this effortless</p>
+			<!--
+            <span>
 				<a class="contenido-header-enlace" href="./index.html">home</a>			
 				<a class="contenido-header-enlace" href="./blog.html">blog</a>
 				<a class="contenido-header-enlace" href="./gallery.html">gallery</a>
-				<a class="contenido-header-enlace" href="./about.html">about</a>				
+				<a class="contenido-header-enlace" href="./about.html">about</a>
+            </span>
+            -->
+
+            <!--Las dos formas son correctas, se utiliza más la lista-->
+
+            <span>
+                <ul>
+                    <li></li>
+                    <a href="#">home</a>
+                    <li></li>
+                    <a href="#">blog</a>
+                    <li></li>
+                    <a href="#">gallery</a>
+                    <li></li>
+                    <a href="#">about</a>
+                </ul>
+                <span>				
 			
 		</div>
 
@@ -27,55 +41,74 @@
 	<div class="content">
 			<div class="content-articulo">
 				<div class="content-articulo-titulofecha">
-					<h4 class="content-articulo-titulofecha-titulo">Travel day</h4>
-					<p class="content-articulo-titulofecha-fecha"> October 22, 2011</p>
-				</div>
-				<div class="content-articulo-autor-comentarios">
-					<a class="autor" href="">John Doe,</a>
-					<a class="enlace-comentarios" href="">3 comments</a>
+					<h2><a href="post.html">Travel day</a></h2>
+					<span class="content-articulo-titulofecha-fecha"> October 22, 2011</span>				
+				    <span class="content-articulo-autor-comentarios">
+					   <a class="enlace" href="author.html">John Doe,</a>
+					   <a class="enlace" href="post.html#comments">3 comments</a>
+                    </span>
 					<p class="articulo">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non veritatis nihil nostrum perspiciatis illum et nisi magni eligendi commodi adipisci dolorem, eveniet possimus officia voluptate consequatur voluptatum, molestiae quibusdam sed!
 					</p>
-				</div>
+                </div>
+				
+                
 				
 				<div class="content-articulo-titulofecha">
-					<h4 class="h4">I'm going to Prague!</h4>
-					<p class="content-articulo-titulofecha-fecha"> October 17, 2011</p>
-					<a class="autor" href="">John Doe,</a>
-					<a class="enlace-comentarios" href="">5 comments</a>
+					<h2><a href="">I'm going to Prague!</a></h2>
+					<span class="content-articulo-titulofecha-fecha"> October 17, 2011</span>
+                    <span class="content-articulo-autor-comentarios">
+					   <a class="enlace" href="">John Doe,</a>
+					   <a class="enlace" href="">5 comments</a>
+                    </span>
 					<p class="articulo"> 
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis autem architecto accusamus, odio impedit optio, est nesciunt corrupti amet, sint non vitae veritatis illo blanditiis, voluptas accusantium cupiditate atque.
 					</p>					
 				</div>
 
-				<div class="menu">
-					<h5>October</h5>
-					<p class="dia-articulo">5</p>
-					<a href="">articulo 10</a>
-					<h5>September</h5>
-					<p class="dia-articulo">30</p>
-					<a href="">articulo 9</a>
-					<h5>August</h5>
+				<div class="archive">
+				<ol>
+                    <li>
+					   <span>October</span>
+					   <p class="dia-articulo">5</p>
+					   <a href="" class="enlace" >articulo 10</a>
+                    </li>
+                    <li>
+					   <span>September</span>
+					   <p class="dia-articulo">30</p>
+					   <a href="" class="enlace">articulo 9</a>
+                    </li>
+                    <li>
+					<span>August</span>.
 					<p class="dia-articulo">4</p>
-					<a href="">articulo 8</a>
-					<h5>July</h5>
+					<a href="" class="enlace">articulo 8</a>
+                    </li>
+                    <li>
+					<span>July</span>
 					<p class="dia-articulo">6</p>
-					<a href="">articulo 7</a>
-					<h5>April</h5>
+					<a href="" class="enlace">articulo 7</a>
+                    </li>
+                    <li>
+					<span>April</span>
 					<p class="dia-articulo">21</p>
-					<a href="">articulo 6</a>
+					<a href="" class="enlace">articulo 6</a>
 					<p class="dia-articulo">7</p>
-					<a href="">articulo 5</a>
-					<h5>March</h5>
+					<a href="" class="enlace">articulo 5</a>
+                    </li>
+                    <li>
+					<span>March</span>
 					<p class="dia-articulo">27</p>
-					<a href="">articulo 4</a>
+					<a href="" class="enlace">articulo 4</a>
 					<p class="dia-articulo">21</p>
-					<a href="">articulo 3</a>
+					<a href="" class="enlace">articulo 3</a>
 					<p class="dia-articulo">18</p>
-					<a href="">articulo 2</a>
-					<h5>January</h5>
+					<a href="" class="enlace">articulo 2</a>
+                    </li>
+                    <li>
+					<span>January</span>
 					<p class="dia-articulo">11</p>
-					<a href="">articulo 1</a>
+					<a href="" class="enlace">articulo 1</a>
+                    </li>
 
 
 				</div>
