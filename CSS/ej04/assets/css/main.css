@@ -1,0 +1,46 @@
+/*operando > : solo se ven afectados los hijos de primer nivel*/
+
+clearfix:before, .clearfix:after{
+    content:"";
+    display:table;
+
+}
+
+.clearfix:after{
+    clear:both;
+}
+
+.clearfix{
+    zoom:1;
+}
+
+ul {
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+
+/*.menu{background-color: gray}*/
+
+.menu > li{
+    float:left;
+    border:1px solid #eee;
+    padding:5px 10px;
+    position:relative;
+   
+}
+
+.submenu {
+
+    position:absolute;
+    display: none;
+    border: 1px solid #eee;
+    top:100%;
+    left:-1px;
+}
+
+/*selecciona el submenu que está dentro del li que está seleccionado y muestra el contenido*/
+
+.menu > li:hover .submenu { 
+    display:block;
+}
