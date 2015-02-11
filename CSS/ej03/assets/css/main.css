@@ -1,3 +1,7 @@
+.body{
+    paddin:1em;
+}
+
 .clearfix:before, .clearfix:after{
     content:"";
     display:table;
@@ -16,6 +20,7 @@
     border: 1px solid gray;
     background-color: #CCC;
     margin-bottom: 20px;
+    padding:0.5em;
 
     
 }
@@ -29,10 +34,18 @@
 }
 
 .fright{
-    float:right;
+    float: right;
+}
+
+.origin{
+    
+    position:relative;
+   
 }
 
 .box{
-    position:relative;
+    position: fixed;
+    top:0;
     left: 100px;
 }
+
