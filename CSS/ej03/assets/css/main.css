@@ -1,0 +1,38 @@
+.clearfix:before, .clearfix:after{
+    content:"";
+    display:table;
+
+}
+
+.clearfix:after{
+    clear:both;
+}
+
+.clearfix{
+    zoom:1;
+}
+
+.container{ 
+    border: 1px solid gray;
+    background-color: #CCC;
+    margin-bottom: 20px;
+
+    
+}
+.span{
+    border: 1px solid gray;
+    background-color: #CCC;
+}
+
+.fleft{
+    float: left;
+}
+
+.fright{
+    float:right;
+}
+
+.box{
+    position:relative;
+    left: 100px;
+}
