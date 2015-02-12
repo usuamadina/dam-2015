@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     font:400 12pt/1.6em Arial, Helvetica, sans-serif;
 
@@ -139,16 +143,15 @@ form .textarea{
 
 }
 
-.form-rows .input,
-.form-rows .label,
-.form-rows .textarea {
+.form .row{
+    margin-bottom:10px;
+}
+
+.form-rows input,
+.form-rows label,
+.form-rows textarea {
     display:block;
     margin:5px 0;
-
-}
-.form-row input,
-.form-row textarea{
-
 
 }
 
