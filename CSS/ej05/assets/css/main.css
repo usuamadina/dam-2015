@@ -1,0 +1,175 @@
+body{
+    font:400 12pt/1.6em Arial, Helvetica, sans-serif;
+
+}
+
+h1{
+    font-size:1.1em;
+    margin-bottom:30px;
+}
+
+h1, ul {
+    margin:0;
+    padding:0;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+a,
+a:visited,
+a:link,
+a:active {
+    text-decoration:none;
+    border-bottom:1px dotted transparent;
+
+
+}
+
+.wrapper{
+    margin: 0 auto; /**centrar elementos de bloque*/
+    width: 960px;
+}
+
+.header{
+    background-color:black;
+    color:#fff;
+    padding:45px 10px;
+    text-align: center;
+}
+
+.header p{
+    margin-top:30px;
+    margin-bottom:30px;
+}
+
+.header a, .header a:visited,
+.header a:link, .header a:active {
+    color: #FFF;
+    border-color:#FFF;
+}
+
+.menu{
+    text-transform: lowercase;
+}
+
+.menu li{
+    display:inline; /*Los elementos de la lista del menú pasan a ser elementos en línea*/
+    margin: 0.5em;
+
+}
+
+.articulo{
+
+    margin:25px 0;
+}
+
+.h2{
+    display:block;
+    color:#000;
+    font-size:1.1em;
+}
+
+.article .h2{
+    margin-bottom:0.2em;
+}
+
+.article .h2 a{
+    color:#000;
+    border-color:#000;
+   /* text-decoration: none;
+    border-bottom:1px dotted #000; */
+}
+
+.fecha-fright{
+    float:right;
+}
+
+a.enlace{
+    color:#00E;
+    border-color: #00E;
+}
+
+a.enlace-articulo{
+    color:#00E;
+    border-color:#00E;
+}
+
+strong{
+    font-weight:bold;
+}
+
+.archive .dia-articulo{
+    display:inline-block;
+    width:40px;
+    text-align: right;
+    margin-right:10px;
+}
+
+.footer{
+    text-align: center;
+}
+
+h3,h3.{
+    display:block;
+    font-size:1.1em;
+    border-bottom:1px dotted ;
+}
+
+.comments img{
+    width:100px;
+    height: 100px;
+
+}
+
+.fleft-comment{
+    float:left;
+}
+
+.comments .comment{
+
+}
+
+form .input,
+form .textarea{
+    border:1px solid #ccc;
+    width:300px;
+
+
+}
+
+.form-rows .input,
+.form-rows .label,
+.form-rows .textarea {
+    display:block;
+    margin:5px 0;
+
+}
+.form-row input,
+.form-row textarea{
+
+
+}
+
+
+table{
+    padding:50px;
+    background-color:#C0C0C0;
+}
+
+td {
+    padding:5px;
+    background-color:#FFF;
+}
+
+
+th {
+    background-color:#C0C0C0;
+    padding-right:20px;
+
+}
+
+
+
+
