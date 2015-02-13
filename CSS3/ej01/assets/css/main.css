@@ -1,0 +1,97 @@
+/* Diferentes maneras de seleccionar el primer elemento de la lista*/
+li:first-child {
+    color: blue;
+}
+
+li:first-of-type {
+    color: blue;
+}
+
+li:nth-child(1) {
+    color: blue;
+}
+
+li:nth-of-type(1) {
+    color: blue;
+}
+
+li:nth-last-of-type(5) {
+    color: blue;
+}
+
+/* Diferentes maneras de seleccionar el segundo elemento de la lista*/
+li:nth-child(2) {
+    color: black;
+}
+
+li:nth-of-type(2) {
+    color: black;
+}
+
+li:nth-last-of-type(4) {
+    color: black;
+}
+
+/* Diferentes maneras de seleccionar el tercer elemento de la lista*/
+li:nth-child(3) {
+    font-size: 1.8em;
+}
+
+li:nth-of-type(3) {
+    font-size: 1.8em;
+}
+
+li:nth-last-of-type(3) {
+    font-size: 1.8em;
+}
+
+* Diferentes maneras de seleccionar el cuarto elemento de la lista*/
+li:nth-child(4) {
+    font-size: 2em;
+}
+
+li:nth-of-type(4) {
+    font-size: 2em;
+}
+
+li:nth-last-of-type(2) {
+    font-size: 2em;
+}
+
+/* Diferentes maneras de seleccionar el quinto y último elemento de la lista*/
+li:nth-child(5) {
+    color:blue;
+    font-size:2.5em;
+}
+
+li:nth-of-type(5) {
+    color:blue;
+    font-size:2.5em;
+}
+
+li:nth-last-of-type(1) {
+    color:blue;
+    font-size:2.5em;
+}
+
+li:last-child {
+    color:blue;
+    font-size:2.5em;
+}
+
+li:last-of-type {
+    color:blue;
+    font-size:2.5em;
+}
+
+
+/*Esto no selecciona nada porque no hay elemento en .wrapper que siendo de clase .last sea primer hijo*/
+.wrapper .last:first-child {
+    color:green;
+}
+
+/*Esto en cambio seleccionará el elemento que es primer hijo dentro de la clase .last
+ que está dentro de la clase .wrapper, en este caso, el primer párrafo*/
+.wrapper .last :first-child {
+    color:blue;
+}

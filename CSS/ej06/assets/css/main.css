@@ -1,0 +1,30 @@
+.wrapper{
+    width:600px;
+}
+
+.login-outer{
+   position:absolute;
+   top:0;
+   left:0;
+
+   height: 100%;
+   width: 100%;
+
+   background-color: rgba(0,0,0,0.2); /*EL ÚLTIMO DÍGITO ES LA TRANSPARENCIA*/
+
+}
+
+.login{
+    position:absolute;
+    width:400px;
+    height:250px;
+
+    top:50%;
+    left:50%;
+
+    margin-left:-200px;
+    margin-top:-125px;
+
+    padding:20px;
+    background-color:#FFF;
+}

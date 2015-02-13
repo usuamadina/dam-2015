@@ -32,6 +32,8 @@ a:active {
 .wrapper{
     margin: 0 auto; /**centrar elementos de bloque*/
     width: 960px;
+    min-width: 350px;
+    max-width:650px;
 }
 
 .header{
@@ -117,4 +119,40 @@ width: 20px;
 text-align: right;
 margin-right: 10px;
 font-size: .8em;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;    
+    
+
+}
+
+.data-table{
+    border: 3px solid #C0C0C0;
+}
+
+.data-table th,
+.data-table td{
+    padding:5px;
+}
+
+thead, tfoot{
+    background-color:#C0C0C0;
+}
+
+.text-right{
+    text-align:right;
+}
+
+.data-table tfoot{
+    font-weight: :bold;
+}
+
+.data-table .price-th{
+    width:70px;
+}
+
+.data-table td{
+    border-bottom:1px solid #C0C0C0;
 }
