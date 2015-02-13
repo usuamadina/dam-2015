@@ -27,8 +27,6 @@ a:link,
 a:active {
     text-decoration:none;
     border-bottom:1px dotted transparent;
-
-
 }
 
 .wrapper{
@@ -86,93 +84,37 @@ a:active {
     border-bottom:1px dotted #000; */
 }
 
-.fecha-fright{
-    float:right;
-}
-
 a.enlace{
+
     color:#00E;
-    border-color: #00E;
-}
+    border-color:#00E;
+
+    }
 
 a.enlace-articulo{
     color:#00E;
     border-color:#00E;
 }
 
-strong{
-    font-weight:bold;
+.fecha-fright{
+    float:right;
 }
 
-.archive .dia-articulo{
-    display:inline-block;
-    width:40px;
-    text-align: right;
-    margin-right:10px;
-}
-
-.footer{
-    text-align: center;
-}
-
-h3,h3.{
-    display:block;
-    font-size:1.1em;
-    border-bottom:1px dotted ;
-}
-
-.comments img{
-    width:100px;
-    height: 100px;
+.linea-punteada{
+    
+    border-bottom:1px dashed #C0C0C0;
+    display:;
 
 }
 
-.fleft-comment{
-    float:left;
+.strong {
+font-weight: bold;
 }
 
-.comments .comment{
-
+.day {
+display: inline-block;
+width: 20px;
+text-align: right;
+margin-right: 10px;
+font-size: .8em;
 }
-
-form .input,
-form .textarea{
-    border:1px solid #ccc;
-    width:300px;
-
-
-}
-
-.form .row{
-    margin-bottom:10px;
-}
-
-.form-rows input,
-.form-rows label,
-.form-rows textarea {
-    display:block;
-    margin:5px 0;
-
-}
-
-
-table{
-    padding:50px;
-    background-color:#C0C0C0;
-}
-
-td {
-    padding:5px;
-    background-color:#FFF;
-}
-
-
-th {
-    background-color:#C0C0C0;
-    padding-right:20px;
-
-}
-
-
-
-
