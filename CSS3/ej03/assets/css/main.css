@@ -1,0 +1,195 @@
+/* --------------------------------
+Site:       Site name
+CSS author: Your name here
+Updated:    Date
+Updated by: Your name here
+-------------------------------- */
+
+/* ----------------------------
+simple reset
+---------------------------- */
+
+html, body, ul, ol, li, form, fieldset, legend
+{
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p { margin-top: 0; }
+fieldset,img { border: 0; }
+legend { color: #000; }
+li { list-style: none; }
+sup { vertical-align: text-top; }
+sub { vertical-align: text-bottom; }
+
+table
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption, th, td
+{
+    text-align: left;
+    vertical-align: top;
+    font-weight: normal;
+}
+
+input, textarea, select
+{
+    font-size: 110%;
+    line-height: 1.1;
+}
+
+abbr, acronym
+{
+    border-bottom: .1em dotted;
+    cursor: help;
+}
+
+body
+{
+    color: #000;
+    background: radial-gradient(#FFF,#eee);
+    font: 90%/1.3 "DejaVu Sans", "URW Gothic L", "Helvetica Neue", Helvetica, Arial, "Microsoft Sans Serif", sans-serif;
+    padding-top:45px;
+}
+
+
+.container
+{
+    padding:10px;
+  
+}
+
+.nav, .content, .extras{
+
+    background-color:#FFF;
+    border:1px solid #ccc ;
+}
+
+.nav
+{
+    margin-bottom:1em;
+   
+}
+
+.nav li {
+    display: inline-block;
+}
+
+.content
+{
+  
+   margin:1em 0;
+}
+
+.extras
+{
+    padding:0.5em;
+}
+
+.feature-image
+{
+  display:none;
+}
+
+.header{
+    background-color:#ccc;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:40px;
+    border-bottom:1px solid #bbb;
+    box-shadow: 0 -5px 15px 0px #000;
+}
+
+.header h1{
+    margin:0;
+    text-align:center;
+    font-size:1em;
+}
+
+.nav{
+
+}
+
+/*Los mediaqueries tienen que estar al final del css, sino todo sería versión movil*/
+
+/*Empieza la versión Tablet*/
+
+@media (min-width:400px){
+
+    .body{
+        padding-top:0;
+    }
+    
+    .fleft{
+    float:left;
+}
+
+    .fright{
+    float:right;
+}
+
+
+    .header{
+        position:static;
+        background-color:transparent;   
+        width:100%;
+        height:auto;
+        border-bottom: none;
+        box-shadow: none;
+}
+
+     .nav, .extras, .content{
+        background-color:#;
+        border:1px solid transparent;
+    }
+
+    .nav{
+        width:20%;
+    }
+    
+    .col-dcha{
+        width:78%;
+        margin-left:2%;
+    }
+
+
+    .content{
+        margin-top:0;
+        float:right;
+
+    }
+
+    .feature-image{
+        display:block;
+        float:right;
+    }
+}
+
+    @media (min-width:700px){
+
+        .content{
+            float:left;
+            width: 60%;
+
+        }
+
+        .extras{
+            float:left;
+            width:38.44%;
+            margin-left:1.56%;
+        }
+
+    }
+
+/* la suma de los porcentajes entre las columnas content y extras
+tiene que dar el 100% */
+
+}
+
+
+
