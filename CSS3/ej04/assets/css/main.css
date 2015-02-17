@@ -1,0 +1,80 @@
+ #container { width: 500px; height:500px; position: relative;}
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            font-size: 20px;
+            padding: 5px;
+
+        }
+        .box:hover {
+            
+            background-color: blue;
+            color: yellow;
+            font-size: 18px;
+            
+
+                    }
+
+        .ex01 .box {
+            transform:translate(10px,10px);
+                     
+            transition-duration: 0.8s;
+
+
+        }
+        .ex02 .box {
+            transform:translate(10px,20px);
+            /*left: 10px;
+            top: 130px;*/
+            transition-duration: 0.8s;
+
+        }
+        .ex03 .box {
+            transform:translate(10px,30px);
+            /*left: 10px;
+            top: 250px;*/
+            transition-duration: 0.8s;
+
+        }
+        .ex04 .box {
+            transform:translate(10px,40px);
+            /*left: 10px;
+            top: 370px;*/
+            transition-duration: 0.8s;
+
+        }
+
+        .ex01 .box:hover{
+            transform: translate(430px, 100px) scale(0.5) rotate(270deg);
+            transition-property: all;     
+
+        }
+
+
+        .ex02 .box:hover{
+            transform: translate(430px, -100px) scale(0.5) rotate(270deg);
+            transition-property: all;
+
+        }
+
+        .ex03 .box:hover{
+            transform: translate(430px, 100px) scale(0.5) rotate(270deg);
+            transition-property: all;  
+
+        }
+
+        .ex04 .box:hover{
+            transform: translate(430px, -100px) scale(0.5) rotate(270deg);
+            transition-property: all; 
+
+            /*También se puede hacer en lugar de con translate, con top y left, pero lo suyo es utilizar las 
+            propiedades de css3 para ahorrarnos las posiciones relativas y absolutas que dan bastantes dolores de cabeza.
+            Además si en lugar de transition-property:all decimos qué propiedades hay que animar, serían top y left
+             (cuando usemos top y left) y transform, cuando usemos la translación y la rotación*/
+
+        }
+
+
+
+
