@@ -1,0 +1,111 @@
+body {
+            margin: 0px;
+        }
+        #container{
+            background: #666 url(../img/tree.jpg) no-repeat -60px 0;
+
+            width: 420px;
+            height: 480px;
+            position: relative;
+        }
+        .snowflake {
+            color: #fff;
+            font-size: 2em;
+
+            position: absolute;
+        }
+
+        .snowflake.f1 {
+            left: 40px;
+            
+            animation-duration:10s;
+            animation-name:snowing;
+            animation-iteration-count:infinite;
+            animation-timing-function: linear;
+           
+        }
+        .snowflake.f2 {
+            font-size: 1.8em;
+            left: 120px;
+            
+            animation-delay: 2s;
+            animation-duration:10s;
+            animation-name:snowing;
+            animation-iteration-count:infinite;
+            animation-timing-function: linear;
+           
+        }
+        .snowflake.f3 {
+            left: 200px;
+           
+           animation-delay:3.5s;
+            animation-duration:10s;
+            animation-name:snowing;
+             animation-iteration-count:infinite;
+            animation-timing-function: linear;
+           
+        }
+        .snowflake.f4 {
+            font-size: 1.5em;
+            left: 280px;
+            animation-delay:2s;
+            animation-duration:10s;
+            animation-name:snowing;
+            animation-iteration-count:infinite;
+            animation-timing-function: linear;
+            
+        }
+
+
+       
+
+        @keyframes snowing{
+            20%{
+                transform:translate(35px, 100px) rotateX(45deg);
+            }
+
+            40%{
+                transform:translate(0px,200px) rotateX(-45deg);
+
+            60%{
+                transform:translate(25px,-300px) rotateX(45deg);
+            }
+
+            80%{
+                transform:translate(-10px, 400px) rotateX(-45deg);
+            }
+
+            100%{
+                transform:translate(0,480px);
+            }
+
+            
+
+
+        }
+
+        @keyframes fade{
+            0%{
+                opacity:0;
+
+            }
+            70%{
+                opacity: 0.2em;
+
+            }
+            90%{
+
+                opacity:0.4em;
+
+            }
+            95%{
+                opacity:1em;
+
+            }
+            100%{
+
+                opacity:1.2em;
+            }
+        }
+
+        
