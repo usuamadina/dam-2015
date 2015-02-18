@@ -13,7 +13,7 @@ body {
 
 .view {
 
-    width: 300px;
+   width: 300px;
    height: 200px;
    margin: 10px;
    float: left;
@@ -34,20 +34,23 @@ body {
    left: 0;
 }
 .view .mask {
-  
-  transform:translate(-200px, -200px);
+  transition-property: background-color;
+  transition-duration: 400ms;
 
-  background-color: rgba(219,127,8, 0.7);
+  background-color: rgba(219,127,8, 0);
 }
 .view img {
+    transition-property: transform;
+    transition-duration: 400ms;
    display: block;
    position: relative;
    width: 300px;
 }
 .view h2 {
 
- 
-  transform:translate(-200px, -200px);
+ transition-property:transform;
+ transition-duration:400ms;
+  transform:translateY(-200px);
    text-transform: uppercase;
    color: #fff;
    text-align: center;
@@ -58,7 +61,10 @@ body {
    margin: 20px 0 0 0;
 }
 .view p {
-    transform:translate(-200px, -200px);
+
+  transition-property: transform;
+  transition-duration:400ms;
+   transform:translateY(200px);
     
    font-family: Georgia, serif;
    font-style: italic;
@@ -69,7 +75,6 @@ body {
    text-align: center;
 }
 .view a.info {
-  transform:translate(-200px, -200px);
    display: inline-block;
    text-decoration: none;
    padding: 7px 14px;
@@ -77,14 +82,28 @@ body {
    color: #fff;
    text-transform: uppercase;
    box-shadow: 0 0 1px #000;
+   opacity: 0;
 }
-.view a.info:hover {
+.view a.info:hover{
+  
    box-shadow: 0 0 5px #000;
 }
 
 /* ANIMACIONES Y TRANSICIONES */
 
-.view:hover {
-  transform: translate(0px,0px);
+.view .mask:hover{
+   background-color: rgba(219,127,8, 0.7);
 }
 
+.view:hover img {
+  transform: scale(1.2);
+}
+
+.view:hover h2{
+  transform:translateY(0px);
+
+}
+
+.view:hover p{
+  transform:translateY(0px);
+}
