@@ -75,6 +75,8 @@ body {
    text-align: center;
 }
 .view a.info {
+  transition-property: opacity;
+  transition-duration: 400ms;
    display: inline-block;
    text-decoration: none;
    padding: 7px 14px;
@@ -107,3 +109,7 @@ body {
 .view:hover p{
   transform:translateY(0px);
 }
+
+.view:hover a.info{
+  opacity:0.7;
+};

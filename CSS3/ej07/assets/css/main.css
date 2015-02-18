@@ -3,9 +3,17 @@
     font-size: 2em;
     font-weight: bold;
     margin: 5em;
+
+    animation-name:segundero;
+    animation-duration:2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+
 }
 
-#clock {
+.clock {
+
     position: relative;
     width: 378px;
     height: 378px;
@@ -14,9 +22,26 @@
     margin: 5em 0 0 -189px;
 }
 
-#clock div {
+.clock div {
     position: absolute;
 }
 
 
 /* ANIMACIONES Y TRANSFORMACIONES */
+
+@keyframes segundero{
+
+    0%{
+        
+    transform:translateY(15deg);
+
+    }
+    
+    20%{
+    transform:translateY(3deg);
+    }
+
+    100%{
+        transform:translateY(3deg);
+    }
+}
