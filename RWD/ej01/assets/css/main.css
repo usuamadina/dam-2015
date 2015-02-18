@@ -1,0 +1,33 @@
+.main .well{
+    text-align:center;
+}
+
+.footer{
+
+    background-color:#222;
+    color:#fff;
+    padding:20px;
+}
+
+.features .glyphicon{
+    fon-size:3em;
+    color:#777;
+}
+
+.features[class*="col-"]{
+    margin-bottom:25px;
+}
+
+
+@media (min-width:768px){
+
+    .main .well{
+        text-align:left;
+    }
+
+    .footer [class*="col-sm"]{ /* [] indica seleccionar elmentos html*/
+    min-height:150px;
+    }
+
+
+}
