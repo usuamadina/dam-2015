@@ -1,0 +1,92 @@
+body {
+    margin: 0px;
+}
+.container{
+    background: #666 url(../img/ej03_tree.jpg) no-repeat -60px 0;
+    width: 420px;
+    height: 480px;
+    position: relative;
+}
+.snowflake {
+    color: #fff;
+    top: -40px;
+    font-size: 2em;
+    position: absolute;
+    animation-duration: 12s;
+    animation-name: nieve,fade;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.snowflake.f1 {
+    left: 40px;
+    animation-delay: 4.8s;
+}
+.snowflake.f2 {
+    font-size: 1.8em;
+    left: 110px;
+}
+.snowflake.f3 {
+    left: 320px;
+    animation-delay: 5.9s;
+}
+.snowflake.f4 {
+    left: 210px;
+    animation-delay: 3.5s;
+}
+.snowflake.f5 {
+    font-size: 1.5em;
+    left: 280px;
+    animation-delay: 9.1s;
+}
+.snowflake.f6 {
+    font-size: 1.8em;
+    left: 360px;
+    animation-delay: 1.8s;
+}
+.snowflake.f7 {
+    left: 170px;
+    animation-delay: 7.2s;
+}
+
+
+@keyframes nieve {
+    from {
+        top:0;
+    }
+    25% {
+        transform: translateX(40px) rotate(-90deg);
+    }
+    50% {
+        transform: translateX(-30px) rotate(90deg);
+    }
+    75% {
+        transform: translateX(20px) rotate(-90deg);
+    }
+    to {
+        top:480px;
+    }
+}
+
+@keyframes fade {
+    0%{
+        opacity:0;
+    }
+    10%{
+        opacity:1;
+    }
+    80%{
+        opacity:0.8;
+    }
+    85%{
+        opacity:0.6;
+    }
+    90%{
+        opacity:0.4;
+    }
+    95%{
+        opacity:0.2;
+    }
+    98%{
+        opacity:0;
+    }
+}

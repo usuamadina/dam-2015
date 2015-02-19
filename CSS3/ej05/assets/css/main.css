@@ -17,9 +17,10 @@ body {
 
         .snowflake.f1 {
             left: 40px;
-            
+
+                       
             animation-duration:10s;
-            animation-name:snowing;
+            animation-name:snowing, nevando, fade;
             animation-iteration-count:infinite;
             animation-timing-function: linear;
            
@@ -30,7 +31,7 @@ body {
             
             animation-delay: 2s;
             animation-duration:10s;
-            animation-name:snowing;
+            animation-name:snowing, nevando, fade;
             animation-iteration-count:infinite;
             animation-timing-function: linear;
            
@@ -40,7 +41,7 @@ body {
            
            animation-delay:3.5s;
             animation-duration:10s;
-            animation-name:snowing;
+            animation-name:snowing, nevando, fade;
              animation-iteration-count:infinite;
             animation-timing-function: linear;
            
@@ -50,47 +51,47 @@ body {
             left: 280px;
             animation-delay:2s;
             animation-duration:10s;
-            animation-name:snowing;
+            animation-name:snowing, nevando, fade;
             animation-iteration-count:infinite;
             animation-timing-function: linear;
             
         }
 
 
-       
+    @keyframes snowing {
 
-        @keyframes snowing{
-            20%{
-                transform:translate(35px, 100px) rotateX(45deg);
+            from{
+                top:-10px;
             }
+          
 
-            40%{
-                transform:translate(0px,200px) rotateX(-45deg);
-
-            60%{
-                transform:translate(25px,-300px) rotateX(45deg);
+            to{
+                top:480px;
             }
-
-            80%{
-                transform:translate(-10px, 400px) rotateX(-45deg);
-            }
-
-            100%{
-                transform:translate(0,480px);
-            }
-
-            
+   
 
 
         }
 
-        @keyframes fade{
+    @keyframes nevando{
+         0%{
+                transform:translate(0px,0px) rotateX(-90deg);
+            }
+
+         100%{
+                transform:translate(20px,80px) rotate(90deg);
+            }
+    }
+
+
+
+        @keyframes fade {
             0%{
-                opacity:0;
+                opacity:1;
 
             }
             70%{
-                opacity: 0.2em;
+                opacity: 0.8em;
 
             }
             90%{
@@ -99,13 +100,12 @@ body {
 
             }
             95%{
-                opacity:1em;
+                opacity:0.2em;
 
             }
             100%{
 
-                opacity:1.2em;
+                opacity:0.1em;
             }
-        }
+        } 
 
-        
