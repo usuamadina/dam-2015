@@ -2,29 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1 maximun-scale=1 userscalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Ejercicio de Bootstrap</title>
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/main.css">
     
 
 </head>
+
+
 <body>
-<div class="header navbar navbar-inverse">
-<div class="container">
-        /*menu desplegable en barra de navegación*/
+<div class="header">
+    <div class="navbar navbar-default">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu"> <!-- el mismo id del menú desplegable que hemos puesto abajo navbar-menu-->
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Blasting Off With Bootstrap</a>
+        </div>
 
-    <h1>Blasting Off With Bootstrap</h1>
+    <div class="collapse navbar-collapse" id="navbar-menu"> 
+        <!--menú desplegable con su id=navbar-menu. Además tenemos que incluir en el html el javascript correspondiente-->
+        <ul class="nav navbar-nav navbar-right">
+            <li class="active"> <!-- Marcar un enlace como activo class="active"-->
+                <a href="tour.html">Take a Tour</a>
+            </li>
+            <li>
+                <a href="tour.html">Buy Tickets</a>
+            </li>
+        </ul>
+    </div>
+
+        <!--menu desplegable en barra de navegación-->
+
+    
 </div>
 </div>
 
+</div>
 
-<div class="main">
+
+
+<div class="main features">
     <div class="container">
         <div class="well">
             <div class="row">
             <div class="col-xs-12 col-sm-6">
-                <h2> The Fastes Way to Space</h2>
+                <h1 class="h2"> The Fastes Way to Space</h1>
                     <p class="lead" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ipsam a maiores fuga numquam provident odio nisi distinctio maxime perspiciatis dolorem, sit ipsa fugiat, quisquam ad culpa, natus Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p> 
                     <a href="#" class="btn btn-default">Take a tour</a>
                     <a href="" class="btn btn-primary">Buy tickets now</a>
@@ -40,14 +69,14 @@
 
     </div>
 
- <div class="main features">
+ 
      
       <div class="container">
 
         <div class="row text-center ">
-            <div class="col-sx-12 col-sm-4">
+            <div class="col-sx-6 col-xs-offset-3 col-sm-4 col-xs-offset-0">
              <span class="glyphicon glyphicon-briefcase"> </span>
-                <h3> The Fastes Way to Space</h3>
+                <h3> Book today!</h3>
 
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ipsam a maiores fuga numquam provident odio nisi  </p>
         
@@ -58,7 +87,7 @@
             <div class="col-sx-12 col-sm-4">
              <span class="glyphicon glyphicon-random"> </span>
                 
-                <h3> The Fastes Way to Space</h3>
+                <h3> Go Anywhere</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ipsam a maiores fuga numquam provident odio nisi </p>
 
             </div>
@@ -68,7 +97,7 @@
             <div class="col-sx-12 col-sm-4">
              <span class="glyphicon glyphicon-send"></span>
                 
-                <h3> The Fastes Way to Space</h3>
+                <h3> Rocket Bus</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ipsam a  maiores fuga numquam provident odio nisi </p>
 
             </div>       
@@ -77,7 +106,7 @@
          
         </div>
 
-    </div>
+    
     
  </div>
    
@@ -144,6 +173,9 @@
 </div>
     
 </div>
-    
+
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) El orden entre estos dos archivos es IMPORTANTE!!-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>    
+<script src="../bootstrap/js/bootstrap.min.js"> </script>
 </body>
 </html>

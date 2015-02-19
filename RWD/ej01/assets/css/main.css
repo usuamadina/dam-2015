@@ -6,11 +6,12 @@
 
     background-color:#222;
     color:#fff;
-    padding:20px;
+    padding:20px 0;
+    margin-top:20px;
 }
 
 .features .glyphicon{
-    fon-size:3em;
+    font-size:3em;
     color:#777;
 }
 
