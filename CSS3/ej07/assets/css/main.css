@@ -1,18 +1,40 @@
-.start {
+.start  {
     text-align: center;
     font-size: 2em;
     font-weight: bold;
     margin: 5em;
 
-    animation-name:segundero;
-    animation-duration:2s;
+    
+}
+
+
+.second{
+   
+   
+    animation-name:rotar;
+    animation-duration:60s;
+    animation-timing-function: steps(60, end);
+    animation-iteration-count: infinite;
+}
+
+
+.minute{
+    animation-name:rotar;
+    animation-duration:3600s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+}
 
+.hour{
 
+    animation-name:rotar;
+    animation-duration:43200s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 .clock {
+
 
     position: relative;
     width: 378px;
@@ -27,21 +49,18 @@
 }
 
 
-/* ANIMACIONES Y TRANSFORMACIONES */
+/* ANIMACIONES Y TRANSFORMACIONES  */
 
-@keyframes segundero{
+@keyframes rotar{
 
-    0%{
-        
-    transform:translateY(15deg);
+ from{
+  transform:rotate(0deg);
+}   
 
-    }
-    
-    20%{
-    transform:translateY(3deg);
-    }
-
-    100%{
-        transform:translateY(3deg);
-    }
+to{
+    transform:rotate(360deg);
 }
+
+  
+}
+
