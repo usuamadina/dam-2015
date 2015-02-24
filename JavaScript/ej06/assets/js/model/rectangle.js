@@ -14,8 +14,19 @@ App.model.Rectangle = (function(){
         Rectangle.prototype = object.create (App.Model.Shape.prototype);
 
     }
+
+
         Rectangle.prototype.constructor = Rectangle;
     
+        Shape.prototype.getX = function() {
+        return this.getX;
+    };
+
+        Shape.prototype.getY = function() {
+        return this.getY;
+    };
+
+
         Rectangle.prototype.getHeight = function(){
             return _height;
         };
@@ -27,6 +38,8 @@ App.model.Rectangle = (function(){
         Rectangle.prototype.getWidth = function(){
             width = this.getSide;
         };
+
+
 
         
 
