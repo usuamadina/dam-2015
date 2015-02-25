@@ -6,7 +6,22 @@ window.onload = function(){
 
     
 
-    var muestra = function(){
+    var muestra = function(e){
+
+        // hemos quitado la almohadilla del href y hemos puesto 
+        //una url real, para ver que es lo que pasa. Lo que hace es
+        //ejecutar las dos acciones, cargar el texto-quitar enlace y después
+        // ir a la url. 
+
+        e.preventDefault(); 
+
+
+        // así hacemos que el al hacer click en el enlace
+        // no se comporte como tal
+        // en un formulario, el comportamiento por defecto es
+        // enviar el formulario, podemos llevar un contador de errores y
+        // en caso de error no enviamos el formulario.
+
 
         if(span.length){
             console.log(span[0].classList.remove('oculto'));
