@@ -23,7 +23,7 @@
     console.log(c.getRadius());
     console.log(c.getArea());   
 
-    var sq = new App.Model.Square();
+    var sq = new App.Model.Square(3,10,7);
 
     console.log(sq);
     c.setSide(5);
