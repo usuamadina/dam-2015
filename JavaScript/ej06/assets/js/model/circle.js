@@ -1,4 +1,5 @@
 var App = App || {Model : {} }; 
+
 App.Model.Circle =(function(){
     //Propiedades privadas
     var _radius;
@@ -12,7 +13,7 @@ App.Model.Circle =(function(){
         //App.Shape.bind(this)(x,y);
         //App.Shape.apply(this,[x,y]);
        
-        _radius = (typeof radius === 'number') ? _radius : 0;        
+        _radius = (typeof radius === 'number') ? radius : 0;        
          
     }
 
@@ -23,15 +24,17 @@ App.Model.Circle =(function(){
     //Circle.prototype.constructor = Circle;
     //Circle.prototype= new App.Model.Shape();
 
+    Circle.prototype.setRadius = function (){
+        _radius = (typeof radius ==='number') ? radius : 0;
+
+    };
+
 
     Circle.prototype.getRadius = function (){
         return _radius;
     };
 
-    Circle.prototype.setRadius = function (){
-        radius = (typeof radius ==='number') ? _radius : 0;
-
-    };
+    
     
     Circle.prototype.getArea = function (){
         return Math.PI * Math.pow( _radius,2 );

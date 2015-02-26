@@ -1,6 +1,6 @@
 var App = App || {Model : {} };
 
-App.model.Rectangle = (function(){
+App.Model.Rectangle = (function(){
 
     var _height;
    
@@ -18,7 +18,7 @@ App.model.Rectangle = (function(){
     }
 
         //Llamamos al constructor y heredamos los métodos del padre (Shape)
-        Rectangle.prototype = Object.create (App.Model.Shape.prototype);
+        Rectangle.prototype = Object.create (App.Model.Square.prototype);
         //Rectangle.prototype.constructor = Rectangle;
 
     

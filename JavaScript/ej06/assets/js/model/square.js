@@ -1,6 +1,6 @@
 var App = App || {Model : {} };
 
-App.model.Square = (function(){
+App.Model.Square = (function(){
 
     var _side;
    
@@ -22,7 +22,7 @@ App.model.Square = (function(){
      //Square.prototype.constructor = Square;
 
    
-        //definimos los métodos en el prototipo, de esta forma lo heredarán
+        //Definimos los métodos en el prototipo, de esta forma lo heredarán
         //las instacias que hagamos de la clase
 
         Square.prototype.setSide = function (){
