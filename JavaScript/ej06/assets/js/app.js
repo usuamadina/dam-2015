@@ -21,19 +21,21 @@
     console.log(c.getX());
     console.log(c.getY());
     console.log(c.getRadius());
-    console.log(c.getArea());   
+    console.log(c.getArea());  
+
 
     var sq = new App.Model.Square(3,10,7);
-
     console.log(sq);
-    c.setSide(5);
+    sq.setSide(5);
     console.log(sq.getX());
     console.log(sq.getY());
-    console.log(c.getSide());
-    console.log(c.getArea());
+    console.log(sq.getSide());
+    console.log(sq.getArea());
+
 
     var r = new App.Model.Rectangle(20,20, 3, 5);
     console.log(r);
+    r.setHeight(4);
     console.log(r.getX());
     console.log(r.getY());
     console.log(r.getHeight());

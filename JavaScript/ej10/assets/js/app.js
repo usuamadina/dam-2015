@@ -58,7 +58,7 @@ window.onload = function(){
         lista.addEventListener('click', remove, false);
     }
 
-    document.addEventListener('click',log,false)
+    document.addEventListener('click',log,false);
     
 
 

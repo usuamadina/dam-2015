@@ -12,7 +12,7 @@ App.Model.Rectangle = (function(){
         
 
         //Variables específicas de la clase Rectangle        
-        _height = (typeof height === 'number') ? _height : 0;
+        _height = (typeof height === 'number') ? height : 0;
       
 
     }
@@ -29,12 +29,12 @@ App.Model.Rectangle = (function(){
         };
 
         Rectangle.prototype.setHeight = function (){
-            _height = (typeof height ==='number') ? _height : 0;
+            _height = (typeof height ==='number') ? height : 0;
         };
 
        Rectangle.prototype.getArea = function (height){
         return this.getSide() * _height;
-       }
+       };
 
   
 return Rectangle;
