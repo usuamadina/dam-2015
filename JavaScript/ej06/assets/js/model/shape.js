@@ -1,6 +1,4 @@
-var App = App || {
-    Model: {}
-}; // Creamos la variable App, si existe App = App y si no existe App=Model{}
+var App = App || { Model: {} }; // Creamos la variable App, si existe App = App y si no existe App=Model{}
 
 App.Model.Shape = (function() {
 
@@ -35,11 +33,11 @@ App.Model.Shape = (function() {
     };
 
     Shape.prototype.setX = function() {
-        _x += (typeof x === 'number') ? x : 0;
+        _x += (typeof x === 'number') ? _x : 0;
     };
 
     Shape.prototype.setY = function() {
-        _y += (typeof y === 'number') ? y : 0;
+        _y += (typeof y === 'number') ? _y : 0;
     };
 
    

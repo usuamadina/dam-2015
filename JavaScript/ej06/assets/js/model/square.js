@@ -3,38 +3,42 @@ var App = App || {Model : {} };
 App.model.Square = (function(){
 
     var _side;
-    Square = App.Model.Square;
+   
     
     //Constructor
     function Square(x, y, side){
-        Square.call(this,x ,y);
 
-        _side = (typeof side === 'number') ? side : 0;
+        //LLamamos al padre        
+        App.Model.Shape.call(this,x ,y, side);
 
-        Square.prototype = object.create (App.Model.Shape.prototype);
+        _side = (typeof side === 'number') ? _side : 0;
+     
 
     }
+
+     //Heredamos métodos de la clase principal
+
+    Square.prototype = Object.create (App.Model.Shape.prototype);
+     //Square.prototype.constructor = Square;
+
    
+        //definimos los métodos en el prototipo, de esta forma lo heredarán
+        //las instacias que hagamos de la clase
+
+        Square.prototype.setSide = function (){
+            _side = (typeof side ==='number') ? _side : 0;
+        };
+
     
         Square.prototype.getSide = function(){
             return _side;
         };
 
-        Square.prototype.setSide = function (){
-            side = (typeof side ==='number') ? side : 0;
-        };
-
-        Square.prototype.getArea= function(){
-            return Math.pw(side,2);
-        };
-
-
-
-        Square.prototype = Object.create (App.Model.Shape.prototype);
         
+        Square.prototype.getArea= function(){
+            return Math.pw(_side,2);
+        };   
       
-
-
 
 
 return Square;

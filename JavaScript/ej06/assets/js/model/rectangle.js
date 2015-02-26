@@ -3,54 +3,40 @@ var App = App || {Model : {} };
 App.model.Rectangle = (function(){
 
     var _height;
-    Rectangle = App.Model.Square.Rectangle;
-    
+   
     //Constructor
     function Rectangle(x, y, side, height){
-        Square.call(this, x ,y, side, height);
 
-        _height = (typeof height === 'number') ? height : 0;
+        //Llamada al padre (Shape) para heredar sus variables
+        App.Model.Square.call(this, x ,y, side, height);
+        
 
-        Rectangle.prototype = object.create (App.Model.Shape.prototype);
+        //Variables específicas de la clase Rectangle        
+        _height = (typeof height === 'number') ? _height : 0;
+      
 
     }
 
+        //Llamamos al constructor y heredamos los métodos del padre (Shape)
+        Rectangle.prototype = Object.create (App.Model.Shape.prototype);
+        //Rectangle.prototype.constructor = Rectangle;
 
-        Rectangle.prototype.constructor = Rectangle;
     
-        Shape.prototype.getX = function() {
-        return this.getX;
-    };
-
-        Shape.prototype.getY = function() {
-        return this.getY;
-    };
-
+        
 
         Rectangle.prototype.getHeight = function(){
             return _height;
         };
 
         Rectangle.prototype.setHeight = function (){
-            height = (typeof height ==='number') ? height : 0;
+            _height = (typeof height ==='number') ? _height : 0;
         };
 
-        Rectangle.prototype.getWidth = function(){
-            width = this.getSide;
-        };
+       Rectangle.prototype.getArea = function (height){
+        return this.getSide() * _height;
+       }
 
-
-
-        
-
-
-
-        Rectangle.prototype = Object.create (App.Model.Shape.prototype);
-      
-
-
-
-
-return Square;
+  
+return Rectangle;
 
 })();

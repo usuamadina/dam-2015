@@ -15,16 +15,27 @@
     console.log(s2.getX());
     console.log(s2.getY());
 
-    var c = new App.Model.Circle (10,10,1);
-
+    var c = new App.Model.Circle(10,10,3);
     console.log(c);
     console.log(c.getX());
     console.log(c.getY());
-    console.log(c.setRadius(4));
     console.log(c.getRadius());
+    console.log(c.getArea());   
 
+    var sq = new App.Model.Square(15,15,6);
+    console.log(sq);
+    console.log(sq.getX());
+    console.log(sq.getY());
+    console.log(c.getSide());
+    console.log(c.getArea());
 
-   
+    var r = new App.Model.Rectangle (20,20, 3, 5);
+    console.log(r);
+    console.log(r.getX());
+    console.log(r.getY());
+    console.log(r.getHeight());
+    console.log(r.getArea());
+
 
 
 })();
