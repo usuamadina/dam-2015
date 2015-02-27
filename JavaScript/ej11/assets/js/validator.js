@@ -60,7 +60,6 @@ HTMLFormElement.prototype.validate = function() {
 
  var validateRequired = function(e) {
         
-        //aqui la instanciamos, la vaciamos
         errores = [];
 
 
@@ -69,18 +68,16 @@ HTMLFormElement.prototype.validate = function() {
                 if(!validator.pwd(this.value)) {
                     
                     errores.push(this.name + ' no es una contraseña válida. Debe contener mayúsculas, minúsculas y dígitos');
-               } else {
-                    if(!validator.required(this.value)){
+               } else if(!validator.required(this.value)){
                         errores.push(this.name + ' es obligatorio');
-                    }
-               }
-            }else if(this.type === 'textarea') {
+                
+               } else if(this.type === 'textarea') {
                
                 if(!this.value || this.textLength > 50) {
                    
                     errores.push('Introduzca ' + this.name + ' que no superen los 50 caracteres');
-               }
-            }else if(this.type === 'checkbox') {
+
+               } else if(this.type === 'checkbox') {
               
                 if(!this.checked) {
                  
@@ -92,12 +89,12 @@ HTMLFormElement.prototype.validate = function() {
                  
                     errores.push(this.name + ' es obligatorio');
                }
-            }
-
+             }  
+             
             if (errores.length) {
                 showError.call(this, errores.join('\n'));
             }
-    };
+    }
 
 
 
