@@ -11,7 +11,7 @@ App.Model.Square = (function(){
         //LLamamos al padre        
         App.Model.Shape.call(this,x ,y, side);
 
-        _side = (typeof side === 'number') ? _side : 0;
+        _side = (typeof side === 'number') ? side : 0;
      
 
     }

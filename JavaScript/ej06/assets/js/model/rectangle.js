@@ -12,7 +12,7 @@ App.Model.Rectangle = (function(){
         
 
         //Variables específicas de la clase Rectangle        
-        _height = (typeof height === 'number') ? _height : 0;
+        _height = (typeof height === 'number') ? height : 0;
       
 
     }
