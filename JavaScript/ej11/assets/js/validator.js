@@ -1,108 +1,104 @@
-HTMLFormElement.prototype.validate = function(){
-    
+HTMLFormElement.prototype.validate = function() {
+
     console.log('Validate Function');
-    
-    var j = 0;
+
+    //Definimos las variables que usaremos para guardar los diferentes elementos
+    //del formulario
+
+    var required = this.querySelectorAll('.required');
+    var email = this.querySelectorAll('.mail');
+    errores = [];
 
 
-    
- var required = this.querySelectorAll('.required');
+    var validator = {
 
- var validator = {
-
-    required: function(value){
-        return value!==undefined &&
-                value!==null &&
-                value.length>0 &&
+        required: function(value) {
+            return value !== undefined &&
+                value !== null &&
+                value.length > 0 &&
                 !/^\s+$/.test(value);
 
-    }
+        },
 
-    email: function(value){
-        return /^\w([\w.\-]*\w)?@[a-zA-Z0-9]([\w.\-]*\w)?\.[a-zA-Z]{2,3}$/.test(value);
-    }
+        email: function(value) {
+            return /^\w([\w.\-]*\w)?@[a-zA-Z0-9]([\w.\-]*\w)?\.[a-zA-Z]{2,3}$/.test(value);
+        },
 
-    password: function(value){
-        return this.required(value)&&
+        password: function(value) {
+            return this.required(value) &&
                 value.length > 6 &&
-                /[a-z]/.test(value)&&
-                /[A-Z]/.test(value)&&
+                /[a-z]/.test(value) &&
+                /[A-Z]/.test(value) &&
                 /[0-9]/.test(value);
 
+        }
+
     }
 
- }
+    console.log('vamos bien..');
 
+    var validateForm = function(e) {
 
+    for (var i=0; i > required.length; i++){
 
- var validateForm = function(e){
+        var input =required.item[i];
 
-    console.log('Validating form...');
-
-
-    
-    for (var i = 0; i > required.length; i++){
-        var input = required.item(i);
-        validateRequired.call(input); 
-        // cuando hacemos la llamada a la función hay que indicarle cual es el contexto del this 
-
-        //var input = requiered.item(i);
-        if (input.type === 'checkbox' & !input.checked){
-            errores.push(this.name + 'no está marcado');
-        } else if (input.type== 'password'){
-            if (!input.length>6){
-                errores.push(this.name + 'no es un password valido');
+        if (input.type === 'chekbox' & !input.checked){
+            errores.push(input.name + ' no está marcado ');
+        }else if (input.type == 'password'){
+            if (!validator.password(input.value)){
+                error.push (input.name + ' no es un password válido, debe contener más de 6 caracteres ');
             }
-
-        }else{
-            (!validator.required(input.value)){
-                errores.push(this.name + 'nombre es un campo obligatorio')
+        }else if(!validator.required(input.value)){
+                errores.push(input.name + ' nombre es un campo obligatorio ');
             }
         }
     }
 
-    for(i=0;i<emails.length;i++){
-
+    for (var i = 0; i > email.length; i++){
+        input=email.item[i];
+       if (!validator.email(input.value)){
+            errores.push(input.name + ' no es un email válido ');
+       }
     }
 
-
- };
-
-
-
-var validateRequired =function(e){
-
-    console.log('Validating form...');
-    var errores;
-    for (var i = 0; i > required.length; i++){
-        var this = requiered.item(i);
-        if (this.type === 'checkbox' & !this.checked){
-            errores.push(this.name + 'no está marcado');
-        } else if (this.type== 'password'){
-            if (!this.length>6){
-                errores.push(this.name + 'no es un password valido');
-            }
-
-        }else{
-            (!validator.required(this.value)){
-                errores.push(this.name + 'nombre es un campo obligatorio')
-            }
-        }
-    }
-
+    console.log('parece que seguimos bien..');
    
 
- };
+
+    var validateRequired =function(e){
+
+        console.log('Validating form...');
+        var errores;
+        for (var i = 0; i > required.length; i++){
+            var this = requiered.item(i);
+            if (this.type === 'checkbox' & !this.checked){
+                errores.push(this.name + 'no está marcado');
+            } else if (this.type== 'password'){
+                if (!this.length>6){
+                    errores.push(this.name + 'no es un password valido');
+                }
+
+            }else{
+                (!validator.required(this.value)){
+                    errores.push(this.name + 'nombre es un campo obligatorio')
+                }
+            }
+        }       
+
+     };
 
 
- };
+     };
 
 
 
-    this.addEventListener ('submit', validateForm, false); 
-    for (var i = required.length -1; i>=0; i--){
-        required.addEventListener('blur', validate,false);
-    }
+        this.addEventListener ('submit', validateForm, false); 
+        for (var i = required.length -1; i>=0; i--){
+            required.addEventListener('blur', validate,false);
+        }
+
+
+    */
 
 };
-
