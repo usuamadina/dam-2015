@@ -33,26 +33,17 @@ HTMLFormElement.prototype.validate = function() {
 
         }
 
-    }
+    };
 
-    console.log('vamos bien..');
+
+     console.log('vamos bien..');
 
     var validateForm = function(e) {
 
     for (var i=0; i > required.length; i++){
 
-        var input =required.item[i];
-
-        if (input.type === 'chekbox' & !input.checked){
-            errores.push(input.name + ' no está marcado ');
-        }else if (input.type == 'password'){
-            if (!validator.password(input.value)){
-                error.push (input.name + ' no es un password válido, debe contener más de 6 caracteres ');
-            }
-        }else if(!validator.required(input.value)){
-                errores.push(input.name + ' nombre es un campo obligatorio ');
-            }
-        }
+        validateRequired.call(required[i]);
+          
     }
 
     for (var i = 0; i > email.length; i++){
@@ -62,43 +53,74 @@ HTMLFormElement.prototype.validate = function() {
        }
     }
 
+};
+
     console.log('parece que seguimos bien..');
    
 
+ var validateRequired = function(e) {
+        
+        //aqui la instanciamos, la vaciamos
+        errores = [];
 
-    var validateRequired =function(e){
 
-        console.log('Validating form...');
-        var errores;
-        for (var i = 0; i > required.length; i++){
-            var this = requiered.item(i);
-            if (this.type === 'checkbox' & !this.checked){
-                errores.push(this.name + 'no está marcado');
-            } else if (this.type== 'password'){
-                if (!this.length>6){
-                    errores.push(this.name + 'no es un password valido');
-                }
-
-            }else{
-                (!validator.required(this.value)){
-                    errores.push(this.name + 'nombre es un campo obligatorio')
-                }
+        if(this.type === 'password') {
+              
+                if(!validator.pwd(this.value)) {
+                    
+                    errores.push(this.name + ' no es una contraseña válida. Debe contener mayúsculas, minúsculas y dígitos');
+               } else {
+                    if(!validator.required(this.value)){
+                        errores.push(this.name + ' es obligatorio');
+                    }
+               }
+            }else if(this.type === 'textarea') {
+               
+                if(!this.value || this.textLength > 50) {
+                   
+                    errores.push('Introduzca ' + this.name + ' que no superen los 50 caracteres');
+               }
+            }else if(this.type === 'checkbox') {
+              
+                if(!this.checked) {
+                 
+                    errores.push(this.name + ' no está marcado');
+               }
             }
-        }       
+            else {
+                if(!validator.required(this.value)) {
+                 
+                    errores.push(this.name + ' es obligatorio');
+               }
+            }
 
-     };
+            if (errores.length) {
+                showError.call(this, errores.join('\n'));
+            }
+    };
 
 
-     };
 
+     var showError = function(msgError) {
+
+        var span = document.createElement('span');
+        span.classList.add('help-block');
+        span.innerText = msgError;
+
+        this.parentNode.classList.add('has-error');
+        this.parentNode.appendChild(span);
+    };
+
+    
+   
 
 
         this.addEventListener ('submit', validateForm, false); 
-        for (var i = required.length -1; i>=0; i--){
-            required.addEventListener('blur', validate,false);
+        for (var k = required.length -1; k >= 0; k--){
+            required.addEventListener('blur', validateRequired,false);
         }
 
 
-    */
+  
 
 };
