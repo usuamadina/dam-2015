@@ -26,7 +26,7 @@ App.Model.Square = (function(){
         //las instacias que hagamos de la clase
 
         Square.prototype.setSide = function (){
-            _side = (typeof side ==='number') ? _side : 0;
+            _side = (typeof side ==='number') ? side : 0;
         };
 
     

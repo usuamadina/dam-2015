@@ -1,4 +1,8 @@
 window.onload = function(){
-    document.getElementById('registro').validate();
+
+    var form = document.getElementById('registro');
     //llamamos a validate en el contexto del formulario
-}
+
+    form.validate();
+
+};
