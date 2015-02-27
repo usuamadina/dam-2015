@@ -9,7 +9,7 @@ todoApp.controller('TodoController', ['$scope', function($scope){
     $scope.todos= todos; //indicamos que hay unos todo's que tiene que tener en cuenta
     $scope.addTodo= function(){
         todos.push({done:false, task: $scope.inputText});
-        $scope.inputText();
+        $scope.inputText = '';
         
     };
 
