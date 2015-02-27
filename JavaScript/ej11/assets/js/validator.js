@@ -65,7 +65,7 @@ HTMLFormElement.prototype.validate = function() {
 
         if(this.type === 'password') {
               
-                if(!validator.pwd(this.value)) {
+            if(!validator.pwd(this.value)) {
                     
                     errores.push(this.name + ' no es una contraseña válida. Debe contener mayúsculas, minúsculas y dígitos');
                } else if(!validator.required(this.value)){
@@ -77,7 +77,7 @@ HTMLFormElement.prototype.validate = function() {
                    
                     errores.push('Introduzca ' + this.name + ' que no superen los 50 caracteres');
 
-               } else if(this.type === 'checkbox') {
+               }} else if(this.type === 'checkbox') {
               
                 if(!this.checked) {
                  
@@ -90,11 +90,12 @@ HTMLFormElement.prototype.validate = function() {
                     errores.push(this.name + ' es obligatorio');
                }
              }  
-             
+
             if (errores.length) {
                 showError.call(this, errores.join('\n'));
             }
     }
+};
 
 
 
