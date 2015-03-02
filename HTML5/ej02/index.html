@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reproductor de video</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/app.js"></script>
+</head>
+
+<!--<div class="reproductor" class="Reproductor">-->
+<div class="wrapper">
+
+    <video id="player" autoplay poster="assets/video/cielo.jpg">
+        <source src="assets/video/Teahupoo.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+        <source src="assets/video/Teahupoo.webm" type='video/webm; codecs="vp8, vorbis"'>
+            <p>Your browser doesn’t support video.</p>
+
+    </video>
+
+
+
+</div>
+
+
+<div class="controles">
+    <input type="button" class="boton" id="iniciar"value="Iniciar">
+    <input type="button" class="boton" id="pausa" value="Pausa">
+    <input type="button" class="boton" id="parar" value="Parar">
+    <input type="button" class="boton" id="avanzar" value="Avanzar">
+    <input type="button" class="boton" id="retroceder" value="Retroceder">
+    <input type="button" class="boton" id="inicio" value="Inicio">
+    <input type="button" class="boton" id="fin" value="Fin">
+    <input type="button" class="boton" id="pcompleta" value="Pantalla Completa">
+    <input type="range" min="0" max="100" step="1" id="volume">
+
+    <progress value="0" max="20"></progress>
+
+
+
+
+
+</div>
+
+
+<!-- Para simular una lista de reproducción hacemos una lista con los tres videos y utilizamos los data-- que hemos visto al principio de la clase
+
+<div class="tracklist">
+    <ul class="list-unstyled">
+        <li class="data-src"><span></span></li>
+        <li class="data-src"><span></span></li>
+        <li class="data-src"><span></span></li>
+    </ul>
+</div>
+
+ <-->
+
+<body>
+
+</body>
+
+</html>
