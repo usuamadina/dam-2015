@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Reproductor de video</title>
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <script src="assets/js/app.js"></script>
 </head>
 
@@ -22,20 +23,29 @@
 
 </div>
 
+<div class="row">
+    <div class="col-xs-12">
+        <progress value="0" max="100"></progress>
+    </div>
+</div>
 
+<div class="row">
+<div class="col-xs-12">
 <div class="controles">
-    <input type="button" class="boton" id="iniciar"value="Iniciar">
-    <input type="button" class="boton" id="pausa" value="Pausa">
-    <input type="button" class="boton" id="parar" value="Parar">
-    <input type="button" class="boton" id="avanzar" value="Avanzar">
-    <input type="button" class="boton" id="retroceder" value="Retroceder">
-    <input type="button" class="boton" id="inicio" value="Inicio">
-    <input type="button" class="boton" id="fin" value="Fin">
-    <input type="button" class="boton" id="pcompleta" value="Pantalla Completa">
+    
+    <input type="button" class="control play" id="play" value="Play" >
+    <input type="button" class="control pause" id="pause" value="Pause">
+    <input type="button" class="control stop" id="stop" value="Stop">
+    <input type="button" class="control forward" id="forward" value="Forward">
+    <input type="button" class="control bacward" id="backward" value="Backward">
+    <input type="button" class="control start" id="start" value="Start">
+    <input type="button" class="control end" id="end" value="End">
+    <input type="button" class="control fullscree" id="fullscreen" value="Fullscreen">
     <input type="range" min="0" max="100" step="1" id="volume">
 
-    <progress value="0" max="20"></progress>
 
+</div>
+</div>
 
 
 

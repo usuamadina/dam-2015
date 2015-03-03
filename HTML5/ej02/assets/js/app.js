@@ -2,16 +2,18 @@ window.onload = function() {
 
 var loaded=false;
 var player = document.getElementById('player');
-var iniciar = document.getElementById('iniciar');
-var pausa = document.getElementById('pausa');
-var parar = document.getElementById('parar');
-var avanzar = document.getElementById('avanzar');
-var retroceder = document.getElementById('retroceder');
-var inicio = document.getElementById('inicio');
-var fin = document.getElementById('fin');
-var pcompleta = document.getElementById('pcompleta');
+var play = document.getElementById('play');
+var pause = document.getElementById('pause');
+var stop = document.getElementById('stop');
+var forward = document.getElementById('forward');
+var backward = document.getElementById('backward');
+var startFn = document.getElementById('startFn');
+var end = document.getElementById('end');
+var fullscreen = document.getElementById('fullscreen');
 var volume = document.getElementById('volume');
+var progress = document.getElementById('progress');
 var playlist= document.getElementById('playlist');
+
 
 
 
@@ -23,11 +25,11 @@ var canPlayfn = function (e){
     progress.value=0;
 };
 
+
 var playFn = function (e){
     if(loaded){
         player.play();
         volume.value = player.volume*100;
-
     }
 };
 
@@ -96,7 +98,14 @@ var changeVideo = function (e){
 
 
 
+    player.addEventListener('click', playFn, false);
+    play.addEventListener('click', playFn, false);
+    pause.addEventListener('click', PauseFn, false);
+    stop.addEventListener('click', StopFn, false);
 
+    document.addEventListener('canplay',canplayFn,false);
+    player.addEventListener('update', updateFn, false);
+    volume.addEventListener('input', volumeFn, false);
 
 
 
@@ -178,14 +187,7 @@ var changeVideo = function (e){
 
 
 
-    player.addEventListener('click', playFn, false);
-    play.addEventListener('click', playFn, false);
-    pause.addEventListener('click', PauseFn, false);
-    stop.addEventListener('click', StopFn, false);
-
-    document.addEventListener('canplay',canplayFn,false);
-    player.addEventListener('update', updateFn, false);
-    volume.addEventListener('input', volumeFn, false);
+    
 
 
 

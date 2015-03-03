@@ -12,7 +12,7 @@
                 var mayor = [];
                 for (var k = 0; k < j; k++) {
                     if (mayor.length < misstrings[k].length) {
-                    	console.log(misstrings[k]);
+                    	//console.log(misstrings[k]);
                         mayor = misstrings[k];
                     }
                 }
