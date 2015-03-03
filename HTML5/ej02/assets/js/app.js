@@ -1,5 +1,7 @@
 window.onload = function() {
 
+
+
 var loaded=false;
 var player = document.getElementById('player');
 var play = document.getElementById('play');
@@ -7,7 +9,7 @@ var pause = document.getElementById('pause');
 var stop = document.getElementById('stop');
 var forward = document.getElementById('forward');
 var backward = document.getElementById('backward');
-var startFn = document.getElementById('startFn');
+var start = document.getElementById('start');
 var end = document.getElementById('end');
 var fullscreen = document.getElementById('fullscreen');
 var volume = document.getElementById('volume');
@@ -15,10 +17,10 @@ var progress = document.getElementById('progress');
 var playlist= document.getElementById('playlist');
 
 
+//Html5 video events + Api http://www.w3.org/2010/05/video/mediaevents.html
 
 
-
-var canPlayfn = function (e){
+var canPlayFn = function (e){
     console.log('video loaded');
     loaded=true;
     volume.value=player.volume*100;
@@ -79,7 +81,7 @@ var endFn = function(e){
 };
 
 var updateFn = function (e){
-    progress.value = player.curretnTime/player.duration*100;
+    progress.value = player.currentTime/player.duration*100;
 };
 
 var volumeFn = function (e){
@@ -98,15 +100,23 @@ var changeVideo = function (e){
 
 
 
-    player.addEventListener('click', playFn, false);
+    //player.addEventListener('click', playFn, false);
     play.addEventListener('click', playFn, false);
     pause.addEventListener('click', PauseFn, false);
     stop.addEventListener('click', StopFn, false);
+    start.addEventListener('click',startFn,false);
+    backwrd.addEventListener('click',backwardFn,false);
+    forward.addEventListener('click',forwardFn,false);
+    end.addEventListener('click',endFn, false);
+    volume.addEventListener('input', volumeFn, false);
+
+
+
+
 
     document.addEventListener('canplay',canplayFn,false);
     player.addEventListener('update', updateFn, false);
-    volume.addEventListener('input', volumeFn, false);
-
+    
 
 
 
