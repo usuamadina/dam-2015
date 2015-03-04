@@ -5,6 +5,7 @@ HTMLFormElement.prototype.validate = function() {
     //Definimos las variables que usaremos para guardar los diferentes elementos
     //del formulario
 
+
     var required = this.querySelectorAll('.required');
     var email = this.querySelectorAll('.mail');
     errores = [];
@@ -40,22 +41,31 @@ HTMLFormElement.prototype.validate = function() {
 
     var validateForm = function(e) {
 
-    for (var i=0; i > required.length; i++){
+    for (var i = 0; i < required.length; i++){
 
-        validateRequired.call(required[i]);
+        //validateRequired.element = required[i];
+        //validateRequired.validator = validator.required;
+        //validateRequired.msg = 'Error';
+        //validateRequired.call(input);
+
+       validateRequired.call(required[i]);
           
     }
 
-    for (var i = 0; i > email.length; i++){
-        input=email.item[i];
-       if (!validator.email(input.value)){
+    for (var i = 0; i < email.length; i++){
+        email = email.item[i];
+       if (!validator.email(email.value)){
             errores.push(input.name + ' no es un email válido ');
        }
     }
 
+    if (errores.length){
+        e.preventDefault();
+    }
+
 };
 
-    console.log('parece que seguimos bien..');
+console.log('parece que seguimos bien..');
    
 
  var validateRequired = function(e) {
@@ -65,7 +75,7 @@ HTMLFormElement.prototype.validate = function() {
 
         if(this.type === 'password') {
               
-            if(!validator.pwd(this.value)) {
+            if(!validator.password(this.value)) {
                     
                     errores.push(this.name + ' no es una contraseña válida. Debe contener mayúsculas, minúsculas y dígitos');
                } else if(!validator.required(this.value)){
@@ -77,9 +87,8 @@ HTMLFormElement.prototype.validate = function() {
                    
                     errores.push('Introduzca ' + this.name + ' que no superen los 50 caracteres');
 
-               }} else if(this.type === 'checkbox') {
-              
-                if(!this.checked) {
+               }} else if(this.type === 'checkbox' && !this.checked) {             
+               
                  
                     errores.push(this.name + ' no está marcado');
                }
@@ -95,7 +104,6 @@ HTMLFormElement.prototype.validate = function() {
                 showError.call(this, errores.join('\n'));
             }
     }
-};
 
 
 
@@ -115,7 +123,7 @@ HTMLFormElement.prototype.validate = function() {
 
         this.addEventListener ('submit', validateForm, false); 
         for (var k = required.length -1; k >= 0; k--){
-            required.addEventListener('blur', validateRequired,false);
+            required[k].addEventListener('blur', validateRequired,false);
         }
 
 

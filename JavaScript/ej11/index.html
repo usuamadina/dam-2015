@@ -1,10 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0063)http://www.arkaitzgarro.com/javascript/snippets/cap18/ej21.html -->
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
     <title>Ejercicio 21 - Validación de formularios</title>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 </head>
 
@@ -14,17 +17,47 @@
     <form action="#" method="POST" id="registro">
         <fieldset>
             <legend>Registro</legend>
-            <label for="registro_nombre">Nombre:</label><input type="text" name="nombre" id="registro_nombre" class="required">
-            <label for="registro_apellidos">Apellido:</label><input type="text" name="apellido" id="registro_apellido" class="required">
-            <label for="registro_email">Email:</label><input type="text" name="email" id="registro_email" class="required">
-            <label for="registro_password">Password:</label><input type="password" name="password" id="registro_password" class="required">
-            <label for="registro_comentarios">Comentarios:</label><textarea name="comentarios" id="registro_comentarios" rows="10"></textarea>
-            <input type="checkbox" name="condiciones" id="registro_condiciones" value="1" class="required" ><label for="registro_condiciones">Acepto las condiciones del servicio.</label>
+            <div class="form-group">
+                <label for="registro_nombre" class="control-label">Nombre:</label>
+                <input type="text" name="nombre" id="registro_nombre" class="required form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="registro_apellidos" class="control-label">Apellido:</label>
+                <input type="text" name="apellido" id="registro_apellido" class="required form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="registro_email" class="control-label">Email:</label>
+                <input type="text" name="email" id="registro_email" class="required form-control">
+            </div>
+                                
+            <div class="form-group">
+                <label for="registro_password" class="control-label">Password:</label>
+                <input type="password" name="password" id="registro_password" class="required form-control">
+            </div>
+            
+
+            <div class="form-group">
+                <label for="registro_comentarios" class="control-label">Comentarios:</label>
+                <textarea name="comentarios" id="registro_comentarios" rows="10" class="form-control"></textarea>
+            </div>
+           
+
+            <div class="form-group">
+                <input type="checkbox" name="condiciones" id="registro_condiciones" value="1" class="required">
+                <label for="registro_condiciones" class="control-label">Acepto las condiciones del servicio.</label>
+            </div>
+           
+
             <input type="submit" value="Enviar">
+
         </fieldset>
     </form>
     <script type="text/javascript" src="assets/js/validator.js"></script>
     <script type="text/javascript" src="assets/js/app.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 </body>
+
 </html>
