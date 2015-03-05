@@ -23,17 +23,17 @@ var playlist= document.getElementById('playlist');
 var canPlayFn = function (e){
     console.log('video loaded');
     loaded=true;
-    volume.value=player.volume*100;
+    volume.value=player.volume*0;
     progress.value=0;
 };
 
 
-var playFn = function (e){
+
     if(loaded){
         player.play();
         volume.value = player.volume*100;
     }
-};
+
 
 var pauseFn = function(e){
 
@@ -43,6 +43,7 @@ var pauseFn = function(e){
     }
 
 };
+
 var stopFn = function(e){
     e.preventDefault();
     if (loaded){
@@ -110,16 +111,11 @@ var changeVideo = function (e){
     end.addEventListener('click',endFn, false);
     volume.addEventListener('input', volumeFn, false);
 
-
-
-
-
-    document.addEventListener('canplay',canplayFn,false);
+    document.addEventListener('canplay',canPlayFn,false);
     player.addEventListener('update', updateFn, false);
+
+  
     
-
-
-
 
 
 
