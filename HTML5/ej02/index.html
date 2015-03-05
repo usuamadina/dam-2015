@@ -5,21 +5,21 @@
     <meta charset="UTF-8">
     <title>Reproductor de video</title>
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <script src="assets/js/app.js"></script>
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">-->
+    
+    <script type="text/javascript" src="assets/js/vendor/modernizr.custom.59161.js"></script>
 </head>
+<body>
 
 <!--<div class="reproductor" class="Reproductor">-->
 <div class="wrapper">
 
     <video id="player" autoplay poster="assets/video/cielo.jpg">
         <source src="assets/video/Teahupoo.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-        <source src="assets/video/Teahupoo.webm" type='video/webm; codecs="vp8, vorbis"'>
-            <p>Your browser doesn’t support video.</p>
+            <source src="assets/video/Teahupoo.webm" type='video/webm; codecs="vp8, vorbis"'>
+                <p>Your browser doesn’t support video.</p>
 
     </video>
-
-
 
 </div>
 
@@ -30,22 +30,22 @@
 </div>
 
 <div class="row">
-<div class="col-xs-12">
-<div class="controles">
-    
-    <input type="button" class="control play" id="play" value="Play" >
-    <input type="button" class="control pause" id="pause" value="Pause">
-    <input type="button" class="control stop" id="stop" value="Stop">
-    <input type="button" class="control forward" id="forward" value="Forward">
-    <input type="button" class="control bacward" id="backward" value="Backward">
-    <input type="button" class="control start" id="start" value="Start">
-    <input type="button" class="control end" id="end" value="End">
-    <input type="button" class="control fullscree" id="fullscreen" value="Fullscreen">
-    <input type="range" min="0" max="100" step="1" id="volume">
+    <div class="col-xs-12">
+        <div class="controles">
+
+            <input type="button" class="control play" id="play" value="Play">
+            <input type="button" class="control pause" id="pause" value="Pause">
+            <input type="button" class="control stop" id="stop" value="Stop">
+            <input type="button" class="control forward" id="forward" value="Forward">
+            <input type="button" class="control bacward" id="backward" value="Backward">
+            <input type="button" class="control start" id="start" value="Start">
+            <input type="button" class="control end" id="end" value="End">
+            <input type="button" class="control fullscree" id="fullscreen" value="Fullscreen">
+            <input type="range" min="0" max="100" step="1" id="volume">
 
 
-</div>
-</div>
+        </div>
+    </div>
 
 
 
@@ -65,8 +65,8 @@
 
  <-->
 
-<body>
-
+<script src="assets/js/player.js"></script>
+<script src="assets/js/app.js"></script>
 </body>
 
 </html>
