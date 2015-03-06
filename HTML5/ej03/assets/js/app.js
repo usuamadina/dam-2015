@@ -28,9 +28,8 @@ window.onload = function() {
     };
 
     if (storage.length) {
-        for (var j = storage.length - 1; j >= 0; j--) {
+        for (var j = storage.length - 1; j >= 0; j--) {            
             var key = storage.key(j);
-
             showData(key, storage.getItem(key));
         }
     }
