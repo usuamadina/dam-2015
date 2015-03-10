@@ -62,7 +62,7 @@ APP.DB = (function() {
 
 
     var getAll = function(success) {
-        var sql = "SELECT * FROM tweets;";
+        var sql = "SELECT * FROM tweets ORDER BY created_at;";
         db.transaction(function(tx) {
             tx.executeSql(sql, [],
                 function(tx, results) {
