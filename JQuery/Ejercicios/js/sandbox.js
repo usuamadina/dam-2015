@@ -1,3 +1,8 @@
+//Ejercicios 3.8 EJERCICIOS 1 y 2
+
+
+
+
 $(function() {
     var $divs = $("div.module");
     var $li = $('#mylist li:nth-child(3)');
@@ -51,7 +56,7 @@ $(function() {
         .addClass('current')
         .siblings()
         .addClass('disabled'); // le pone la clase disabled a todos los hermanos que devuelve sibblings*/
-    
+
 
     var lis = [];
     for (var i = 0; i < 5; i++){
