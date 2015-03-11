@@ -4,16 +4,18 @@ window.onload = function() {
     var results = document.getElementById("resultado");
     var worker = new Worker("assets/js/factorial.js");
        
-    
-    calcular.addEventListener = ('click', function(e) {  	
-    	console.log("hasta aquí llega..");
-            
-        var number = input.value;
-        worker.postMessage(number);
+   
+
+   calcular.addEventListener('click', function(e) {
+        e.preventDefault();
+        var num = input.value;
+        worker.postMessage(num);    
+           
     });
-    
-    worker.addEventListener = ('message', function(e) {
-        var factorial = e.data;
-        results.innerHTML = factorial.join(" ");
+      
+  	
+  	worker.addEventListener('message', function(e) {
+  		var factorial = e.data;
+        results.innerHTML = factorial;
     });
 };

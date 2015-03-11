@@ -11,6 +11,5 @@ function getFactorial(num) {
 this.addEventListener('message', function(e) {
     var factorial = getFactorial(e.data);
     this.postMessage(factorial);
-    console.log(factorial);  
 });
 

@@ -15,7 +15,6 @@ function getPrimes(max) {
 this.addEventListener ('message', function (e){
     var primes= getPrimes(e.data);
     console.log(primes);
-
-
+    this.postMessage(primes);
 });
 
